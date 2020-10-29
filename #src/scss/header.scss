@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    &__content {
+        width: 46.8%;
+        display: block;
+        margin: auto;
+    }
+    &__content-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__content-phone {
+        margin: 41px 0 41px 36.1px;
+        a, label {
+            color: #37373F;
+            font-family: $fontFamily;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        label {
+            color: #b3b3b3;
+        }
+
+    }
+
+	@media (max-width:767px){}
+}
+
