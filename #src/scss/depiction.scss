@@ -1,6 +1,31 @@
 .main-depiction {
-    width: 46.8%;
-    display: block;
-    background-color: skyblue;
-    margin: 0 auto;
+	display: block;
+	background-color: skyblue;
+	margin: 0 auto;
+}
+h2 {
+	font-family: $fontFamily;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 49px;
+	color: #37373F;
+}
+
+p {
+	font-family: $fontFamily;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
+	color: #37373F;
+}
+
+li {
+	font-family: $fontFamily;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #37373F;
 }
