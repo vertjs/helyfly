@@ -2,30 +2,58 @@
 	display: block;
 	background-color: skyblue;
 	margin: 0 auto;
-}
-h2 {
-	font-family: $fontFamily;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 40px;
-	line-height: 49px;
-	color: #37373F;
-}
-
-p {
-	font-family: $fontFamily;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 26px;
-	color: #37373F;
+	width: 100%;
+	&__content {
+		width: 80%;
+		display: block;
+		margin: auto;
+		@media (max-width: 920px) {
+			width: 100%;
+			padding-left: 15px;
+		}
+	}
 }
 
-li {
-	font-family: $fontFamily;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
-	color: #37373F;
+.section-1 {
+	display: flex;
+
+	h2 {
+		font-family: $fontFamily;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 49px;
+		color: #37373F;
+		padding: 18px 0;
+	}
+	
+	p {
+		font-family: $fontFamily;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 26px;
+		color: #37373F;
+	}
+	
+	li {
+		font-family: $fontFamily;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: #37373F;
+	}
 }
+
+.block-1 {
+	background-color: rgb(200, 235, 135);
+	flex: 1;
+	margin: 52px 0;
+}
+.block-2 {
+	background-color: rgb(212, 135, 235);
+	flex: 1;
+	margin: 52px 0;
+}
+

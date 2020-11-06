@@ -2,7 +2,7 @@
 	width: 100%;
 
 	&__content {
-		width: 80%;
+		width: 52%;
 		display: block;
 		margin: auto;
 		@media (max-width: 920px) {
@@ -33,6 +33,4 @@
 		}
 
 	}
-
-	@media (max-width:767px) {}
 }
