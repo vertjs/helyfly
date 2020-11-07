@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	width: 100%;
 	&__content {
-		width: 80%;
+		width: 100%;
 		display: block;
 		margin: auto;
 		@media (max-width: 920px) {
@@ -46,14 +46,24 @@
 	}
 }
 
-.block-1 {
-	background-color: rgb(200, 235, 135);
-	flex: 1;
-	margin: 52px 0;
-}
-.block-2 {
-	background-color: rgb(212, 135, 235);
-	flex: 1;
-	margin: 52px 0;
-}
+.section-1 {
+	display: flex;
+	width: 52%;
+	background-color: darkkhaki;
+	margin: auto;
+	&__item-1 {
+		background-color: rgb(200, 235, 135);
+		margin: 52px 0;
+		flex-shrink: 1;
+		flex-basis: 50%;
+	}
+	&__item-2 {
+		background-color: rgb(212, 135, 235);
+		margin: 52px 0;
+		flex-shrink: 1;
+		flex-basis: 50%;
+		video {
 
+		}
+	}
+}
