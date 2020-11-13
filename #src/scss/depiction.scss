@@ -16,7 +16,12 @@
 
 .section-1 {
 	display: flex;
-
+	width: 52%;
+	background-color: darkkhaki;
+	margin: auto;
+	@media only screen and (max-width : 1224px) {
+		flex-direction: column;
+	}
 	h2 {
 		font-family: $fontFamily;
 		font-style: normal;
@@ -24,9 +29,7 @@
 		font-size: 40px;
 		line-height: 49px;
 		color: #37373F;
-		padding: 18px 0;
 	}
-	
 	p {
 		font-family: $fontFamily;
 		font-style: normal;
@@ -35,7 +38,6 @@
 		line-height: 26px;
 		color: #37373F;
 	}
-	
 	li {
 		font-family: $fontFamily;
 		font-style: normal;
@@ -43,27 +45,60 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: #37373F;
+		list-style-position: inside;
+		padding: 15px 15px 15px 45px;
 	}
-}
-
-.section-1 {
-	display: flex;
-	width: 52%;
-	background-color: darkkhaki;
-	margin: auto;
 	&__item-1 {
 		background-color: rgb(200, 235, 135);
-		margin: 52px 0;
-		flex-shrink: 1;
-		flex-basis: 50%;
+		margin-top: 39px;
+		padding-right: 39px;
+		width: 50%;
+		@media only screen and (max-width : 1224px) {
+			width: 100%;
+		}
 	}
 	&__item-2 {
-		background-color: rgb(212, 135, 235);
-		margin: 52px 0;
-		flex-shrink: 1;
-		flex-basis: 50%;
-		video {
-
+		&__bg {
+			background-color: rgb(212, 135, 235);
+			position: relative;
+			margin-top: 39px;
+			width: 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 21; 
+			@media only screen and (max-width : 1224px) {
+				width: 100%;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				visibility: hidden;
+			}
+			.active {
+				visibility: visible;
+			}
+			iframe {
+				position: absolute; 
+				z-index: 20; 
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				visibility: hidden;
+			}
+			button {
+				position: absolute; 
+				z-index: 21; 
+				right: 41px; 
+				bottom: 30px;
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				background-image: url(../img/icons/play.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-color: transparent;
+			}
 		}
 	}
 }
