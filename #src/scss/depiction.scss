@@ -16,11 +16,23 @@
 
 .section-1 {
 	display: flex;
-	width: 52%;
+	width: 59.5%;
 	background-color: darkkhaki;
 	margin: auto;
-	@media only screen and (max-width : 1224px) {
+	justify-content: space-between;
+	align-items: center;
+	@media (max-width: 920px) {
 		flex-direction: column;
+		width: 100%;
+		p {
+			font-size: 14px;
+		}
+		li {
+			padding: 10px 15px 10px 45px;
+		}
+		h2 {
+			font-size: 28px;
+		}
 	}
 	h2 {
 		font-family: $fontFamily;
@@ -37,6 +49,7 @@
 		font-size: 18px;
 		line-height: 26px;
 		color: #37373F;
+		padding: 18px 0 21px;
 	}
 	li {
 		font-family: $fontFamily;
@@ -51,28 +64,20 @@
 	&__item-1 {
 		background-color: rgb(200, 235, 135);
 		margin-top: 39px;
-		padding-right: 39px;
-		width: 50%;
-		@media only screen and (max-width : 1224px) {
-			width: 100%;
-		}
+		max-width: 50%;
 	}
 	&__item-2 {
 		&__bg {
 			background-color: rgb(212, 135, 235);
 			position: relative;
 			margin-top: 39px;
-			width: 50%;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 21; 
-			@media only screen and (max-width : 1224px) {
-				width: 100%;
-			}
 			img {
-				max-width: 100%;
 				height: auto;
 				visibility: hidden;
+				object-fit: contain;
 			}
 			.active {
 				visibility: visible;
