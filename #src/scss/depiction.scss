@@ -1,6 +1,5 @@
 .main-depiction {
 	display: block;
-	background-color: skyblue;
 	margin: 0 auto;
 	width: 100%;
 	&__content {
@@ -9,7 +8,6 @@
 		margin: auto;
 		@media (max-width: 920px) {
 			width: 100%;
-			padding-left: 15px;
 		}
 	}
 }
@@ -17,32 +15,10 @@
 .section-1 {
 	display: flex;
 	width: 59.5%;
-	background-color: darkkhaki;
 	margin: auto;
 	justify-content: space-between;
 	align-items: flex-start;
-	@media (max-width: 920px) {
-		flex-direction: column;
-		width: 100vw;
-    min-width: 100vw;
-		p {
-			font-size: 14px;
-		}
-		li {
-			padding: 10px 15px 10px 45px;
-		}
-		h2 {
-			font-size: 28px;
-		}
-		&__item-1 {
-			width: 100vw;
-			min-width: 100vw;
-		}
-		&__item-2 {
-			width: 100vw;
-			min-width: 100vw;
-		}
-	}
+	position: relative;
 	h2 {
 		font-family: $fontFamily;
 		font-style: normal;
@@ -70,14 +46,11 @@
 		padding: 15px 15px 15px 45px;
 	}
 	&__item-1 {
-		background-color: rgb(200, 235, 135);
 		margin-top: 39px;
 		max-width: 50%;
-		flex-basis: 492px;
-    padding-right: 30px;
+    padding-right: 80px;
 	}
 	&__item-2 {
-		background-color: rgb(212, 135, 235);
 		position: relative;
 		margin-top: 39px;
 		img {
@@ -111,18 +84,71 @@
 			background-color: transparent;
 		}
 	}
+	@media (max-width: 920px) {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		position: relative;
+		p {
+			padding: 15px;
+			font-size: 14px;
+		}
+		ul {
+			padding: 15px;
+		}
+		li {
+			padding: 10px 15px 10px 45px;
+		}
+		h2 {
+			font-size: 28px;
+			padding: 40px 15px 15px;
+			text-align: center;
+		}
+		&__item-1 {
+			min-width: 100%;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+		}
+		&__item-2 {
+			width: 100vw;
+			position: relative;
+			margin: 0;
+			display: flex;
+			img {
+				height: auto;
+				object-fit: contain;
+				width: 100%;
+				max-width: 100vw;
+				padding: 15px;
+				align-self: center;
+			}
+		}
+	}
 }
 
 .section-2 {
 	display: flex;
-	margin: auto;
+	margin: 20px auto;
 	width: 59.5%;
 	align-items: center;
-	background-color: rgb(135, 235, 185);
 	border-top: 0.5px solid #C7C7C7;
 	border-bottom: 0.5px solid #C7C7C7;
 	border-left: transparent;
 	border-right: transparent;
+	padding: 28px 0;
+
+	div {
+		display: flex;
+		background-color: white;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		padding-left: 14px;
+	}
 	p {
 		font-family: $fontFamily;
 		font-size: 18px;
@@ -131,9 +157,11 @@
 		line-height: 26px;
 		letter-spacing: 0em;
 		text-align: left;
-		padding: 32px 14px;		
+		margin: 0 10px 0 0;
 	}
-img {
-	background-color: rgb(208, 235, 135);
-}
+	@media (max-width: 920px) {
+		width: 100%;
+		padding: 30px 0 15px 15px;
+	}
+
 }
