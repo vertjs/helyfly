@@ -14,7 +14,7 @@ let path = {
   src: {
     pug: [source_folder + "/*.pug", "!" + source_folder + "/_*.pug"],
     css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/script.js",
+    js: source_folder + "/js/**.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
   },
@@ -41,6 +41,7 @@ let { src, dest } = require("gulp"),
   imagemin = require("gulp-imagemin"),
   webp = require("gulp-webp"),
   webpCss = require("gulp-webp-css"),
+  //webpHtml = require("gulp-webp-html"),
   svgSprite = require("gulp-svg-sprite"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
@@ -61,6 +62,7 @@ function html() {
   return src(path.src.pug)
     .pipe(pug({ pretty: true }))
     .pipe(fileinclude())
+  //  .pipe(webpHtml())
     .pipe(bemValidator())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
@@ -80,7 +82,7 @@ function css() {
         overrideBrowserslist: ["last 5 versions"],
       })
     )
-    .pipe(webpCss())
+    //.pipe(webpCss())
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(
