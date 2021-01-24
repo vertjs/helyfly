@@ -3,5 +3,6 @@
     "workbench.list.keyboardNavigation": "simple",
     "editor.tabCompletion": "on",
     "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn"
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.fontSize": 16
 }

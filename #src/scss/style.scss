@@ -19,9 +19,11 @@ $addColor: #ffffff;
 
 //Оболочка=====================================================================
 .wrapper {
-  overflow: scroll;
+/*   overflow: scroll;
   min-width: 100vw;
-  height: 100vh;
+  height: 100vh; */
+  overflow-y: scroll;
+  min-height: 100%;
 }
 //Оболочка=====================================================================
 
@@ -31,7 +33,7 @@ html {
 }
 
 .container {
-  max-width: 1920px;
+/*   max-width: 1920px; */
   padding: 0px;
   margin: 0px;
 }
@@ -48,13 +50,20 @@ html {
 @import "header.scss";
 @import "content.scss";
 @import "depiction.scss";
+@import "about.scss";
+@import "reserved.scss";
+@import "map.scss";
+@import "reviews.scss";
+@import "networks.scss";
 @import "footer.scss";
+@import "modal.scss";
 
 //Подключение файлов стилей страниц и элементов===============================
 
 //Основной блок===============================================================
 .page {
   position: absolute;
+/*   min-width: 100vw; */
   width: 100%;
   top: 0;
   left: 0;

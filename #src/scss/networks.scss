@@ -1,0 +1,37 @@
+.networks {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: block;
+	width: 100%;
+}
+.networks__content {
+  width: 100%;
+  display: block;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 920px) {
+    width: 100%;
+  }
+}
+.networks__logo {
+  padding: 50px 0 27px 85px;
+}
+.networks__refs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  a {
+    padding: 0 15px;
+  }
+}
+.language {
+  a {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #37373F;
+  }
+}

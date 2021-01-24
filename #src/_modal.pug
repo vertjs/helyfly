@@ -1,0 +1,26 @@
+.modal
+  button(class="close")
+  h4 Бронирование
+  form(action="" method="post")
+    label(for="date" data-end="*") Дата
+    span(class="datepicker-toggle")
+      span(class="datepicker-toggle-button")
+      input(type="date" name="date" id="date")
+    label(for="email" data-end="*") Email
+    input(type="email" name="email" id="email" placeholder="Электронная почта")
+    label(for="name" data-end="*") Имя
+    input(type="text" name="name" id="name")
+    label(for="surname" data-end="*") Фамилия
+    input(type="text" name="surname" id="surname")
+    label(for="mobile" data-end="*") Телефон
+    input(type="tel" name="mobile" placeholder="+7 (905) 184-81-40" id="mobile")
+    label(for="cards" data-end="*") Данные карты
+    input(type="tel" inputmode="numeric" maxlength="19" name="card" placeholder="Номер карты" id="card")
+    .card
+      input(type="tel" maxlength="7" name="expires" placeholder="Срок действия" id="expires")
+      input(type="tel" maxlength="4" name="cvv" placeholder="CVV" id="cvv")
+    input(type="checkbox" name="agree" class="custom-checkbox" id="agree")
+    .label
+      .label__after
+      label(for="agree") Я согласен с пользовательским соглашением и публичной офертой
+  button(type="submit" class="submit") Забронировать

@@ -1,0 +1,60 @@
+section.map
+  div#map
+  .map__content
+    .map__questions
+      table
+        tr
+          th(rowspan="2") 1
+          td Где встречаемся?
+        tr
+          td Москва
+        tr
+          th(rowspan="2") 2
+          td Время съемки?
+        tr
+          td 3 часа
+        tr
+          th(rowspan="2") 3
+          td Мест осталось:
+        tr
+          td 2 места
+        tr(lang="it")
+          th(rowspan="3") 
+          td
+            p Мария Иванова
+            p Фотограф
+            p Показать больше информации
+      .map__slider
+        button.btn-left
+        .slider-list
+          ul
+            li
+              div
+                h5 1
+                p Где встречаемся?
+                p Москва
+            li
+              div
+                h5 2
+                p Время съемки?
+                p 3 часа
+            li
+              div
+                h5 3
+                p Мест осталось:
+                p 2 места
+        button.btn-right
+      .map__pagination
+        ul
+          li
+          li
+          li
+      .map__autor
+        .photographer
+          div
+            img(src="./img/photo/photographer.svg", alt="photo by author")
+            img(src="./img/icons/like.svg", alt="like")
+          div
+            h4 Марина Иванова
+            p Фотограф
+            button Показать больше информации о фотографе

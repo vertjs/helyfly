@@ -1,5 +1,6 @@
 const listMarker = document.querySelector('.section-1__item-1').querySelectorAll('li')
 
+
 let ready = () => {
   document.querySelectorAll(".ibg").forEach(el => {
     if(el.querySelector('img')) {
@@ -15,15 +16,9 @@ let ready = () => {
       document.querySelector('.section-1__item-1 > div')
     )
     Array.from(listMarker).forEach((el, i) => marksScreenMobile(el, i))
-  
+    document.querySelector('.section-3 > p').textContent += ':'
   }
-  else {
-    document.querySelector('.section-1__item-1').insertBefore(
-      document.querySelector('.section-1__item-1 > div'),
-      document.querySelector('.section-1__item-2')
-    )
-    Array.from(listMarker).forEach((el, i) => marksScreenDesktop(el, i))
-  }
+  Array.from(listMarker).forEach((el, i) => marksScreenDesktop(el, i))
 }
 
 document.addEventListener("DOMContentLoaded", ready);
@@ -48,3 +43,15 @@ function videoPlay(event) {
   event.preventDefault();
 } 
 
+document.addEventListener("load", addColon);
+
+function addColon() {
+  console.log('addColon')
+  if(screen.width < 920) {
+    document.querySelector('.section-3 > p').textContent = document.querySelector('.section-3 > p').textContent.slice(0, -1)
+    document.querySelector('.reserved__content p').textContent = document.querySelector('.reserved__content p').textContent.slice(0, -1)
+  } else if(screen.width > 919) {
+    document.querySelector('.section-3 p').textContent += ':'
+    document.querySelector('.reserved__content p').textContent += ':'
+  }
+}

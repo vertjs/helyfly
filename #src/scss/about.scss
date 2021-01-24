@@ -1,0 +1,113 @@
+.about {
+  margin: 20px auto;
+	max-width: 1140px;
+  border-top: 0.5px solid #C7C7C7;
+  border-bottom: 0.5px solid #C7C7C7;
+  border-left: transparent;
+  border-right: transparent;
+  display: flex;
+  p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #37373F;
+    margin-top: 18px;
+    @media (max-width: 920px) {
+      margin: 0;
+    }
+  }
+  button {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5286EC;
+    background: none;
+    border: none;
+    padding: 7px 0;
+    cursor: pointer;
+    outline: inherit;
+    &:after {
+      content: url('../img/icons/down.svg');
+      padding: 5px;
+    }
+
+  }
+  button:last-child {
+    margin-bottom: 50px;
+    @media (max-width: 920px) {
+      margin: 0;
+    }
+  }
+  &__article {
+    flex-basis:46%;
+    h3 {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      color: #37373F;
+      padding: 40px 0 0 0;
+      @media (max-width: 920px) {
+        padding: 25px 0;
+      }
+    }
+    @media (max-width: 920px) {
+      order: 2;
+    }
+  }
+  @media (max-width: 920px) {
+		padding: 14px 0;
+    margin: 20px 15px 20px 15px;
+    flex-direction: column;
+    border: none;
+	}
+}
+.photographer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 55px auto;
+  flex-grow: 0;
+  @media (max-width: 920px) {
+    order: 1;
+    margin: 0 auto;
+  }
+  div {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  img:last-child {
+    position: absolute;
+    right: 0;
+  }
+  h4 {
+    font-family: $fontFamily;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 0 5px 0;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 2px;
+  }
+  button {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 10px;
+    width: 70%;
+    padding: 0 20px;
+    white-space: normal;
+    word-wrap: break-word;
+    &:after {
+      content: '';
+    }
+  }
+}

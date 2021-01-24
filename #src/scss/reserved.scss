@@ -1,0 +1,137 @@
+.reserved {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: block;
+	width: 100%;
+	&__content {
+		width: 100%;
+    display: block;
+    margin: 0 auto;
+    >p:first-child {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 29px;
+      color: #37373F;
+      padding: 30px 0;
+      text-align: center;
+      @media (max-width: 920px) {
+        font-family: 'Montserrat-Regular';
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: normal;
+      }
+    }
+  }
+  @media (max-width: 920px) {
+    padding: 0 15px;
+	}
+}
+
+
+.block {
+  max-width: 770px;
+  border: 1px solid #C7C7C7;
+  box-sizing: border-box;
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  @media (max-width: 920px) {
+    max-width: 100%;
+	}
+}
+.block__b1 {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  p {
+    padding: 30px 0 20px 0;
+    margin: 0;
+  }
+  img {
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 9px;
+    margin-left: 14px;
+  }
+  @media (max-width: 920px) {
+    justify-content: center;
+    img {
+      display: none;
+    }
+  }
+}
+.block__b2 {
+  border-top: 0.5px solid #C7C7C7;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  p {
+    padding: 10px 0;
+    margin: 0;
+  }
+  p:nth-child(even) {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0;
+  }
+  button {
+    padding: 16px 33px;
+    background: none;
+    border: 2px solid #FC9B09;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: inherit;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FC9B09;
+    margin: 0 30px;
+    @media (max-width: 920px) {
+      margin: 0 0 30px 20px;
+    }
+  }
+  .content {
+    padding: 0 30px;
+    @media (max-width: 920px) {
+      padding: 20px;
+    }
+  }
+  @media (max-width: 920px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+.block__b3 {
+  border-top: 0.5px solid #C7C7C7;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 10px 30px 0 30px;
+  .evalution {
+    border-style: none;
+    max-width: 100%;
+    padding: 0;
+  }
+  p {
+    margin: 0;
+    padding-right: 10px;
+    @media (max-width: 920px) {
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+  @media (max-width: 920px) {
+    padding: 20px 30px 18px 30px;
+  }
+}
