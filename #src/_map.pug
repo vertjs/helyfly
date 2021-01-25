@@ -25,9 +25,9 @@ section.map
             p Фотограф
             p Показать больше информации
       .map__slider
-        button.btn-left
+        button.btn-left(disabled)
         .slider-list
-          ul
+          ul(style="left: 0")
             li
               div
                 h5 1
@@ -46,7 +46,7 @@ section.map
         button.btn-right
       .map__pagination
         ul
-          li
+          li.show 
           li
           li
       .map__autor

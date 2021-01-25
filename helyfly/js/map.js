@@ -23,5 +23,46 @@ function init(){
 
 }
 
-const pag = document.querySelector('.map__pagination li')
-console.log(pag)
+const pag = document.querySelectorAll('.map__pagination li')
+const btnRight = document.querySelector('.btn-right')
+const btnLeft = document.querySelector('.btn-left')
+let sliderList = document.querySelector(".slider-list ul")
+let sliderLi = document.querySelector(".slider-list li").getBoundingClientRect()
+let amountQuest = document.querySelectorAll(".slider-list li")
+
+btnRight.addEventListener('click', leafingRight)
+btnLeft.addEventListener('click', leafingLeft)
+
+let viewSlide = 0;
+function leafingRight(e) {
+  pag[viewSlide].classList.remove('show')
+  if(viewSlide < amountQuest.length - 1) {
+    viewSlide++
+    btnLeft.disabled = false
+    e.target.disabled = false
+    if(viewSlide === amountQuest.length - 1) {
+      e.target.disabled = true
+    } 
+  } else {
+    e.target.disabled = true
+  }
+  pag[viewSlide].classList.add('show')
+  sliderList.style.transform = 'translateX('+(-viewSlide * sliderLi.width)+'px)'
+}
+
+function leafingLeft(e) {
+  pag[viewSlide].classList.remove('show')
+  if(viewSlide > 0) {
+    viewSlide--
+    e.target.disabled = false
+    btnRight.disabled = false
+    if(viewSlide === 0) {
+      e.target.disabled = true
+    } 
+  } else {
+   e.target.disabled = true
+   btnRight.disabled = false
+  }
+  pag[viewSlide].classList.add('show')
+  sliderList.style.transform = 'translateX('+(-viewSlide * sliderLi.width)+'px)'
+}

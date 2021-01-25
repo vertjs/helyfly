@@ -83,31 +83,13 @@
     @media (min-width: 921px) {
       display: none;
     }
-    p {
-      font-family: $fontFamily;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 23px;
-      text-align: center;
-      color: #37373F;
-    }
-    p:last-child {
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-    }
-    ul {        
-      display: flex;
-      width: 100%;
-    }
-    li {
-      white-space: nowrap;
-      min-width: 100%;
-    }
+    
   }
   &__pagination {
     margin: 10px 0;
+    @media (min-width: 921px) {
+      display: none;
+    }
     ul {
       display: flex;
     }
@@ -118,7 +100,7 @@
       border-radius: 50%;
       margin: 0px 5px;
     }
-    li:active {
+    .show {
       background-color: $mainColor;
       border: none;
       transition: background-color 330ms linear;
@@ -126,10 +108,16 @@
   }
   &__autor {
     padding: 0 30px;
+    @media (min-width: 921px) {
+      display: none;
+    }
     .photographer {
       display: flex;
       flex-direction: row;
       margin: 20px 0;
+      @media (min-width: 921px) {
+        display: none;
+      }
       h4 {
         padding: 0; 
         font-family: 'Montserrat-Regular';
@@ -178,6 +166,34 @@
 .slider-list {
   display: flex;
   overflow: hidden;
+  height: 160px;
+  width: 100%;
+  position: relative;
+  p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #37373F;
+  }
+  p:last-child {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  ul {        
+    display: flex;
+    width: 100%;
+    position: absolute;
+    transition: transform 1s;
+  }
+  li {
+    white-space: nowrap;
+    min-width: 100%;
+    justify-self:stretch;
+  }
 }
 .btn-left {
   display: flex;
@@ -203,8 +219,9 @@
 }
 
 table {
-  padding-left: 30px;
+  padding: 50px 0 50px 30px;
   width: 100%;
+  background-color: #FFFFFF;
   @media (max-width: 920px) {
    display: none;
   }
