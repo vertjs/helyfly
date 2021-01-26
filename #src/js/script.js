@@ -46,7 +46,6 @@ function videoPlay(event) {
 document.addEventListener("load", addColon);
 
 function addColon() {
-  console.log('addColon')
   if(screen.width < 920) {
     document.querySelector('.section-3 > p').textContent = document.querySelector('.section-3 > p').textContent.slice(0, -1)
     document.querySelector('.reserved__content p').textContent = document.querySelector('.reserved__content p').textContent.slice(0, -1)

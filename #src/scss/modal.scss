@@ -5,8 +5,12 @@
   margin-right: -50%;
   transform: translate(-50%, -6%);
   z-index: 100;
-  background-color: #ffffff;
+  background-color: #cfa3a3;
   display: 'none';
+  @media (max-width: 920px) {
+    max-width: 100%;
+    margin: 0;
+  }
   input {
     background-color: transparent;
     padding: 13px 0 11px 20px;
@@ -14,6 +18,9 @@
     border: 1px solid #C7C7C7;
     box-sizing: border-box;
     border-radius: 3px;
+    @media (max-width: 920px) {
+      margin: 10px 17px 0 18px;
+    }
     input::placeholder {
       font-family: $fontFamily;
       font-style: normal;
@@ -72,6 +79,10 @@ form {
   flex-direction: column;
   width: 615px;
   border-radius: 6px;
+  @media (max-width: 920px) {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 label {
   font-family: $fontFamily;
@@ -81,6 +92,10 @@ label {
   line-height: 20px;
   color: #37373F;
   margin: 40px 97px 0 98px;
+  @media (max-width: 920px) {
+    margin: 10px 17px 0 18px;
+  }
+
 }
 #agree {
   font-family: $fontFamily;
@@ -126,6 +141,11 @@ label {
     border: 1px solid red;
   }
   }
+
+    @media (max-width: 920px) {
+      margin: 23px 15px 0 15px;
+    }
+  
 }
 
 
@@ -147,6 +167,9 @@ label {
   box-sizing: border-box;
   border-radius: 3px;
   height: 42px;
+  @media (max-width: 920px) {
+    margin: 10px 17px 0 18px;
+  }
   input {
     padding: 0;
   }
@@ -188,8 +211,26 @@ label::after {
 .card {
   margin: 0 97px 0 98px;
   display: flex;
+  @media (max-width: 920px) {
+    flex-direction: column;
+    margin: 0;
+  }
   input {
     margin: 0;
     flex-basis: 50%;
+    @media (max-width: 920px) {
+      margin: 0 17px 0 18px;
+      border-radius: 0px;
+    }
+  }
+  input:last-child {
+    @media (max-width: 920px) {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+}
+#card {
+  @media (max-width: 920px) {
+    border-radius: 3px 3px 0 0;
   }
 }

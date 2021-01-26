@@ -245,9 +245,8 @@
         </div>
       </section>
       <section class="reviews">
-        <div class="reviews__content">
-          <p>Отзывы</p>
-        </div>
+        <p>Отзывы</p>
+        <div class="reviews__content"></div>
       </section>
       <section class="networks">
         <div class="networks__content">
@@ -264,7 +263,14 @@
       </section>
       <footer>
         <div class="footer__content">
-          <div class="footer__pay"><img src="./img/icons/pay/MC.svg" alt="master_card"><img src="./img/icons/pay/VISA.svg" alt="visa_card"></div>
+          <div class="footer__pay"><img src="./img/icons/pay/MC.svg" alt="master_card"><img src="./img/icons/pay/VISA.svg" alt="visa_card"><img src="./img/icons/pay/PP.svg" alt="pay_pal">
+            <div class="language">
+              <select name="select" onchange="javascript:handleSelect(this)">
+                <option value="RU" selected>RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+          </div>
           <div class="footer__phone">
             <p>Тех. поддержка: 8(800)700-00-00</p>
             <p>© 2018 HELYFLY. All Rights Reserved.</p>

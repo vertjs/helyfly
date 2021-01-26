@@ -73,31 +73,63 @@ reviewsArr.forEach((o, i) => {
   let d2 = document.createElement('div')
   let h5 = document.createElement('h5')
   h5.textContent = o.name
-  d2.append(h5)
+  
   let p2 = document.createElement('p')
+  p2.classList.add('occupation')
   p2.textContent = o.occupation
-  d2.append(p2)
-  let d3 = document.createElement('div')
-  d2.append(d3)
+
   let img2 = document.createElement('img')
   img2.src= o.review[0]
   img2.alt='stars'
-  d3.append(img2)
+
   let p3 = document.createElement('p')
+  p3.classList.add('replica')
   p3.textContent = o.review[1]
-  d3.append(p3)
+
   let p4 = document.createElement('p')
+  p4.classList.add('comment')
   p4.textContent = o.comment
-  d2.append(p4)
+ 
   let p5 = document.createElement('p')
+  p5.classList.add('date')
   p5.textContent = o.date
-  d2.append(p5)
+
+
+  if(screen.width < 920) {
+    d2.append(h5)
+    d2.append(p2)
+    d2.append(img2)
+  } else {
+    d2.append(h5)
+    d2.append(p2)
+    let d3 = document.createElement('div')
+    let d4 = document.createElement('div')
+    d2.append(d3)
+    d2.append(d4)
+    d2.append(p5)
+    
+    d3.append(img2)
+    d3.append(p3)
+    d4.append(p4)
+    console.log(d4)
+  }
 
 
   blockReviews.append(item)
   i < 4 ? item.classList.add('visible') : item.classList.add('invisible')
-  item.append(d1)
-  item.append(d2) 
+
+  if(screen.width < 920) {
+    let d = document.createElement('div')
+    item.append(d)
+    d.append(d1)
+    d.append(d2)
+    item.append(p3)
+    item.append(p4)
+    item.append(p5)
+  } else {
+    item.append(d1)
+    item.append(d2) 
+  }
 })
 
 arrVisible = blockReviews.querySelectorAll('.visible')

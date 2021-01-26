@@ -3,10 +3,10 @@ footer {
   max-width: 1140px;
   display: block;
   width: 100%;
+
 }
 .footer__content {
   width: 100%;
-  display: block;
   margin: auto;
   display: flex;
   p {
@@ -17,17 +17,45 @@ footer {
     color: #B3B3B3;
   }
   @media (max-width: 920px) {
+    flex-direction: column;
     width: 100%;
   }
 }
 .footer__pay {
   padding-left: 85px;
-  img {
-    padding: 11px 20px 39px 0;
+  img:last-of-type {
+    display: none;
   }
+  @media (max-width: 920px) {
+    display: flex;
+    align-items: center;
+    padding: 11px 0px 24px 0;
+    justify-content: start;
+    img:last-of-type {
+      display: block;
+    }
+  }
+  img {
+    padding-left: 20px;
+  }
+
+  .language {
+    display: none;
+    @media (max-width: 920px) {
+      display: block;
+      padding: 0;
+      position: absolute;
+      right: 25px;
+    }
+  }
+
 }
 .footer__phone {
   display: flex;
   flex-direction: column;
   padding-left: 276px;
+  @media (max-width: 920px) {
+    padding: 0 0 20px 0;
+    align-items: center;
+  }
 }

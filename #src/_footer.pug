@@ -3,6 +3,11 @@ footer
     .footer__pay
       img(src="./img/icons/pay/MC.svg", alt="master_card")
       img(src="./img/icons/pay/VISA.svg", alt="visa_card")
+      img(src="./img/icons/pay/PP.svg", alt="pay_pal")
+      .language
+        select(name="select" onchange='javascript:handleSelect(this)')
+          option(value="RU" selected) RU
+          option(value="EN") EN
     .footer__phone
       p Тех. поддержка: 8(800)700-00-00
       p © 2018 HELYFLY. All Rights Reserved.
