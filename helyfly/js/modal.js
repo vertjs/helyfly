@@ -23,6 +23,7 @@ function handleInputDate(event) {
 
 function handleClose(e) {
   modal.classList.toggle('on', false)
+  glass.remove()
 }
 
 const form = document.querySelector('.modal form')
@@ -44,6 +45,7 @@ subm.addEventListener('click', (e) => { // подтвердить брониро
     Array.from(inputs).forEach(el => el.value = null)
     agree.classList.toggle('check', false)
     document.querySelector('.datepicker-toggle p').textContent = null
+    glass.remove()
   }
 })
 

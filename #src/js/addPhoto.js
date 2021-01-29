@@ -3,10 +3,8 @@ const arrPhoto = ['../img/photo/1.svg','../img/photo/2.svg','../img/photo/3.svg'
 let arrImg;
 
 function slider() {
-  if(screen.width < 920) {
-
+  if(screen.width < 921) {
     document.querySelector('.track').classList.remove('invisible')
-
     arrPhoto.forEach((el, i) => {
       let div = document.createElement('div')
       div.style.backgroundImage = `url(${el})`//`photo_${++i}`

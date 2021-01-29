@@ -5,11 +5,10 @@
   margin-right: -50%;
   transform: translate(-50%, -6%);
   z-index: 100;
-  background-color: #cfa3a3;
+  background-color: $addColor;
   display: 'none';
   @media (max-width: 920px) {
-    max-width: 100%;
-    margin: 0;
+    width: 80%;
   }
   input {
     background-color: transparent;
@@ -40,6 +39,10 @@
     top: 22px;
     padding: 10px;
     cursor: pointer;
+    &:active {
+      background-color: $mainColor;
+      opacity: 0.5;
+    }
   }
   .submit {
     padding: 27px 128px;
@@ -61,6 +64,9 @@
       background-color:#ffffff;
       border: 1px solid #fc9b09;
     }
+    @media (max-width: 920px) {
+      padding: 1.2vh;
+    }
   }
   h4 {
     font-family: $fontFamily;
@@ -80,7 +86,7 @@ form {
   width: 615px;
   border-radius: 6px;
   @media (max-width: 920px) {
-    max-width: 100%;
+    width: 100%;
     margin: 0;
   }
 }
@@ -155,8 +161,9 @@ label {
   border: none;
   width: 100%;
   height: 100%;
-  padding-right: 5px;
+  padding-right: 15px;
   opacity: 0;
+  font-size: 20px;
 }
 
 .datepicker-toggle {
@@ -198,6 +205,10 @@ label {
   background-size: contain;
   box-shadow: 0 0 0 6px  white, 0 0 0 7px #C4C4C4;
   border-radius: 0.5px;
+  
+  &:active {
+    box-shadow: 0 0 0 6px  white, 0 0 0 7px black;
+  }
 }
 label::after {
   content: attr(data-end);

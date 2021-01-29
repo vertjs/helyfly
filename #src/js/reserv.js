@@ -1,9 +1,11 @@
 const btn = document.querySelector('.main-screen__reserv')
-const wrapper = document.querySelector('.wrapper')
+const page = document.querySelector('.page')
+let glass = document.createElement('div')
+glass.classList.add('glass')
 btn.addEventListener('click', handleReserv)
 
 function handleReserv(e) {
   e.preventDefault()
-  modal.classList.toggle('on')
-/*   wrapper.style.backgroundColor = '#b9bcce' */
+  modal.classList.toggle('on')  
+  page.prepend(glass)
 }

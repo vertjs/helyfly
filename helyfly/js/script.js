@@ -10,7 +10,7 @@ let ready = () => {
     }
   });
   Array.from(listMarker).forEach((el, i) => marksScreenDesktop(el, i))
-  if(screen.width < 920) {
+  if(screen.width < 921) {
     document.querySelector('.section-1__item-1').insertBefore(
       document.querySelector('.section-1__item-2'),
       document.querySelector('.section-1__item-1 > div')
@@ -46,10 +46,10 @@ function videoPlay(event) {
 document.addEventListener("load", addColon);
 
 function addColon() {
-  if(screen.width < 920) {
+  if(screen.width < 921) {
     document.querySelector('.section-3 > p').textContent = document.querySelector('.section-3 > p').textContent.slice(0, -1)
     document.querySelector('.reserved__content p').textContent = document.querySelector('.reserved__content p').textContent.slice(0, -1)
-  } else if(screen.width > 919) {
+  } else if(screen.width > 920) {
     document.querySelector('.section-3 p').textContent += ':'
     document.querySelector('.reserved__content p').textContent += ':'
   }

@@ -5,7 +5,7 @@ function init(){
   var myMap = new ymaps.Map("map", {
     center: [55.756514141750216,37.60775160863393],
     zoom: 14,
-    controls: []
+    controls: [],
   })
 
   var myPlacemark = new ymaps.Placemark(
@@ -16,11 +16,14 @@ function init(){
       balloonOffset: [5, -40], 
       preset: 'islands#icon', 
       iconColor: '#ea3c3b'
-    }
-  )
-
+    },
+    {
+      balloonPanelMaxMapArea: 0
+    }    
+  );
+  
   myMap.geoObjects.add(myPlacemark);
-
+  myPlacemark.balloon.open();
 }
 
 const pag = document.querySelectorAll('.map__pagination li')
