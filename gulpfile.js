@@ -41,7 +41,7 @@ let { src, dest } = require("gulp"),
   imagemin = require("gulp-imagemin"),
   webp = require("gulp-webp"),
   webpCss = require("gulp-webp-css"),
-  //webpHtml = require("gulp-webp-html"),
+  webpHtml = require("gulp-webp-html"),
   svgSprite = require("gulp-svg-sprite"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
@@ -62,7 +62,7 @@ function html() {
   return src(path.src.pug)
     .pipe(pug({ pretty: true }))
     .pipe(fileinclude())
-  //  .pipe(webpHtml())
+    .pipe(webpHtml())
     .pipe(bemValidator())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());

@@ -17,7 +17,7 @@ if(slides.length > 0) {
   nextTrf = 0,
   prevTrf = 0,
   lastTrf = --slides.length * slideWidth,
-  posThreshold = slides[0].offsetWidth * 0.35,
+  posThreshold = slides[0].offsetWidth * 0.35, 
   trfRegExp = /([-0-9.]+(?=px))/,
   swipeStartTime,
   swipeEndTime,
@@ -50,10 +50,9 @@ if(slides.length > 0) {
     }
   },
   swipeAction = function() {
-
     let evt = getEvent(),
-      style = sliderTrack.style.transform,
-      transform = +style.match(trfRegExp)[0];
+        style = sliderTrack.style.transform,
+        transform = +style.match(trfRegExp)[0];
 
     posX2 = posX1 - evt.clientX;
     posX1 = evt.clientX;
@@ -98,7 +97,6 @@ if(slides.length > 0) {
 
       sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
     }
-
   },
   swipeEnd = function() {
     posFinal = posInit - posX1;

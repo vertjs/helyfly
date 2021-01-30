@@ -28,11 +28,11 @@ const buttonPlay = document.querySelector('.section-1__item-2').querySelector('b
 const ifr = document.querySelector('.section-1__item-2').querySelector('iframe')
 
 function marksScreenMobile(el, i) {
-  el.style.background = 'url(' + '../img/icons/list_m/0' + ++i +'.svg' + ') no-repeat left center';
+  el.style.background = 'url(' + './img/icons/list_m/0' + ++i +'.svg' + ') no-repeat left center';
 }
 
 function marksScreenDesktop(el, i) {
-  el.style.background = 'url(' + '../img/icons/list_d/0' + ++i +'.svg' + ') no-repeat left center';
+  el.style.background = 'url(' + './img/icons/list_d/0' + ++i +'.svg' + ') no-repeat left center';
 }
 /* display video on click */
 buttonPlay.addEventListener('click', videoPlay) 
