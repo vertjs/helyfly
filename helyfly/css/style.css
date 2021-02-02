@@ -81,9 +81,6 @@ h6 {
 }
 
 .wrapper {
-  /*   overflow: scroll;
-  min-width: 100vw;
-  height: 100vh; */
   overflow-y: scroll;
   min-height: 100%;
 }
@@ -94,7 +91,6 @@ html {
 }
 
 .container {
-  /*   max-width: 1920px; */
   padding: 0px;
   margin: 0px;
 }
@@ -1736,7 +1732,6 @@ label::after {
 
 .page {
   position: absolute;
-  /*   min-width: 100vw; */
   width: 100%;
   top: 0;
   left: 0;

@@ -7,7 +7,6 @@ function slider() {
     document.querySelector('.track').classList.remove('invisible')
     arrPhoto.forEach((el, i) => {
       let img = document.createElement('img')
-   //   div.style.backgroundImage = `url(${el})`//`photo_${++i}`
       img.src=el
       img.classList.add('image')
       document.querySelector('.track').append(img)
